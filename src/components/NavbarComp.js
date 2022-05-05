@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {Navbar, Container,Nav, NavDropdown, Form, FormControl,Button} from 'react-bootstrap'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import {Home} from './Home';
-import {English} from './English';
+import English from './English';
 import {German} from './German';
 import {Spanish} from './Spanish';
 
