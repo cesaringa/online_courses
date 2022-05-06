@@ -40,7 +40,7 @@ export default function App (){
               {/* <NavbarComp/> */}
               <Navbar bg="dark" variant={"dark"} expand="lg">
             <Container fluid>
-                <Navbar.Brand href="#">Language courses</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/" href="home">Language courses</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                 <Nav

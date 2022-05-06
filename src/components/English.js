@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { client } from "../client"
-import { Card, ListGroup, ListGroupItem, Badge, Form, Row,Col, Button, CardGroup, Placeholder } from 'react-bootstrap'
+import { Card, ListGroup, ListGroupItem, Badge, Form, Row,Col, Button, CardGroup, Placeholder,FloatingLabel, Nav } from 'react-bootstrap'
 import Calendar from "../images/calendar3.jpg"
 import Location from "../images/location.jpg"
 import Cost from "../images/cost2.jpg"
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
+import NewPosts from './NewPost'
 
 export default function English() {
 
@@ -107,8 +108,7 @@ export default function English() {
             <Card.Text>
                 <b>Preis pro Woche:</b><br></br>
                   100 EUR — 1 bis 4 Wochen<br></br>
-                  90 EUR — 5 bis 11 Wochen<br></br>
-                  80 EUR — 12 bis 19 Wochen<br></br>
+                  90 EUR — 5 bis 19 Wochen<br></br>
                   75 EUR — 20 bis 39 Wochen<br></br>
                   70 EUR — ab 40 Wochen
             </Card.Text>
@@ -127,7 +127,7 @@ export default function English() {
         <ListGroup>
       
           {/* <ListGroup.Item variant="light"></ListGroup.Item> */}
-            <h2><Badge bg="primary">Contact us</Badge></h2>
+            <h3><Badge bg="primary">Contact us</Badge></h3>
             {/* <Badge bg="success">Success</Badge>
             <Badge bg="warning">Success</Badge>      */}
           </ListGroup>
@@ -164,8 +164,8 @@ export default function English() {
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>City</Form.Label>
-            <Form.Control type="city" placeholder="City" />
+            <Form.Label>Telephone number</Form.Label>
+            <Form.Control type="city" placeholder="(z.B. +4912345678901)" />
           </Form.Group>
         </Row>
         {/* <Form.Group className="mb-3" controlId="formGridAddress2">
@@ -193,6 +193,18 @@ export default function English() {
             <Form.Control />
           </Form.Group>
         </Row>
+
+        <>
+          <FloatingLabel controlId="floatingTextarea" label="Your message" className="mb-3">
+            <Form.Control as="textarea" placeholder="Leave a comment here" />
+          </FloatingLabel>
+      
+        </>
+
+        <div>
+          
+        </div> 
+
         {/* <Form.Group className="mb-3" id="formGridCheckbox">
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group> */}
@@ -200,12 +212,14 @@ export default function English() {
           Submit
         </Button>
       </Form>
+      <div>
+        <>
+          <br></br>
+          <Button href={article.fields.path} variant="danger">Go to the top</Button> 
+        </>
+      </div>
     </div>
   )
-
-  // console.log("EnglishArticles", englishArticles)
-
-  // console.log("HERE", articles[0].fields.name)
   
   return (
     <div>
