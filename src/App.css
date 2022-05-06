@@ -82,5 +82,8 @@ main .wrapper {
 .title {
   text-transform: uppercase;
   font-size: 1.8em;
-  color: #f32e67;
+  /* color: #f32e67; */
+  color: #fff;
+  text-align: center;
+  background: #b40d3c;
 }

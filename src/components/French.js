@@ -6,7 +6,7 @@ import Location from "../images/location.jpg"
 import Cost from "../images/cost2.jpg"
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 
-export default function Spanish() {
+export default function French() {
 
   const [articles, setArticles] = useState([])
 
@@ -22,9 +22,9 @@ export default function Spanish() {
 
   console.log("ARTICLES", articles)
   
-  const spanishArticles = articles.filter(article => article.fields.name.includes("Spanish"))
+  const frenchArticles = articles.filter(article => article.fields.name.includes("French"))
 
-  const spanishArticlesList = spanishArticles.map((article, index) =>
+  const frenchArticlesList = frenchArticles.map((article, index) =>
     <div className='post' key={index}>
       <h2 className='title'>{article.fields.name}</h2>
       {article.fields.image&&<img className='image' src={article.fields.image.fields.file.url} alt={article.fields.name} title={article.fields.name} />}
@@ -51,7 +51,7 @@ export default function Spanish() {
                           >
                             {/* <Card.Header>Header</Card.Header> */}
                             <Card.Body>
-                              <Card.Title>About the course </Card.Title>
+                              <Card.Title>About the {article.fields.name} course </Card.Title>
                               <Card.Text>
                               {article.fields.description}
                               </Card.Text>
@@ -200,13 +200,13 @@ export default function Spanish() {
     </div>
   )
 
-  // console.log("spanishArticles", spanishArticles)
+  // console.log("frenchArticles", frenchArticles)
 
   // console.log("HERE", articles[0].fields.name)
   
   return (
     <div>
-      {spanishArticlesList}
+      {frenchArticlesList}
     </div>
   )
 }
